@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+<script src="/JAVASCRIPT/js_tag_semantica.js"></script>
+</head>
+<body>
+    <section>
+         
+        <section>
+            <p>
+                Semântica no HTML5: significado que uma tag transmite sobre o conteúdo;
+                Antes do HTML5, quase tudo era &lt;div&gt; e &lt;span&gt;, dificultando a compreensão
+                por humanos e máquinas;
+                Com HTML5, surgiram elementos com papéis claros, melhorando: <br>
+                ➢ Acessibilidade; <br>
+                ➢ SEO (Search Engine Optimization); <br>
+                ➢ Manutenção do código. <br>
+            </p>
+        </section>
+        <section>
+            <h1>São elementos HTML que dão sentido\significado específico ao conteúdo de uma
+                página;</h1>
+               <p> Ajudam a organizar o conteúdo, tornando-o mais compreensível para os usuários
+                e para os mecanismos de busca; <br>
+                Descrevem o propósito de cada elemento e o tipo de conteúdo que está dentro
+                dele; <br>
+                Expressam a função de uma determinada parte de conteúdo para os
+                navegadores e mecanismos de busca;</p>
+        </section>
+        <section>
+            <p>Ajudam a criar uma hierarquia lógica e organizada, tornando o código mais
+                legível;
+                Benefícios: <br>
+                ➢ Melhora a acessibilidade para usuários com deficiências visuais ou cognitivas <br>
+                ➢ Aprimora o SEO (Search Engine Optimization - Otimização para Motores de Busca) <br>
+                ➢ Torna a estrutura do site mais clara e compreensível <br>
+                ➢ Facilita a navegação e a compreensão do conteúdo <br>
+                ➢ Torna o código mais fácil de manter e atualizar no futuro
+            </p>
+        </section>
+        <section>
+            <img src="imagens/img_site1.png" alt="Algumas tags"width="400" height="300">
+        </section>
+        
+        <section>
+            <p>&lt;section&gt; x &lt;article&gt;<br>
+                ➢ &lt;section&gt; = bloco temático; <br>
+                ➢ &lt;article&gt; = conteúdo independente que poderia existir isolado; <br>
+                ➢ &lt;aside&gt;   = não é apenas barra lateral; pode aparecer dentro de um artigo;</p>
+        </section>
+        <section>
+            <h2>Boas práticas na escolha das tags semânticas</h2>
+            <p> Analise o papel do conteúdo, não a aparência visual;
+                Não usar &lt;section&gt; apenas por estilo — para isso use &lt;div&gt; + CSS;
+                Evitar aninhar tags de forma redundante (ex.: &lt;section&gt; dentro de &lt;section&gt;
+                sem necessidade);
+                Respeitar hierarquia de significado.</p>
+        </section>
+        <section>
+            <h2>&lt;header&gt;</h2>
+            <p>O &lt;header&gt; é utilizado para representar o cabeçalho de um documento ou seção
+            declarados no HTML. Nele podemos inserir elementos do tipo &lt;h1&gt; a &lt;h6&gt;,
+            elementos para representar imagens, parágrafos, listas de navegação.
+            <br><h3>&lt;header&gt;</h3>
+            &lt;h1&gt;Programação III&lt;/h1&gt;<br>
+            &lt;h2&gt;Tag semântica “&lt;header&gt;”&lt;/h2&gt;
+            <h3>   &lt;header&gt;</h3></p>
+        </section>
+        <section>
+            <h1>&lt;section&gt;</h1><p>
+            O elemento &lt;section&gt; representa uma seção dentro de um documento e
+            geralmente contém um título, definido por um dos elementos &lt;h1&gt; a &lt;h6&gt;. Pode
+            ser utilizado, por exemplo, para descrever seções e/ou tópicos de um documento.
+            </section>
+
+        <section>
+            <h1>&lt;nav&gt;</h1>
+            <p>O elemento &lt;nav&gt; é utilizado quando precisamos representar um agrupamento de links
+            de navegação, que por sua vez, são criados com listas e links.
+        </p>
+        <p>
+            &lt;nav&gt;
+            <br><br>
+        &lt;ul&gt;<br>
+<br>&lt;li&gt; &lt;a href=”index.html”>Página Principal&lt;/a&gt;&lt;/li&gt;
+<br>&lt;li&gt; &lt;a href=”conceitos_html.html”>HTML&lt;/a&gt;/li&gt;
+<br>&lt;li&gt; &lt;a href=”conceitos_css.html”>CSS&lt;/a&gt;&lt;/li&gt;
+<br>&lt;li&gt; &lt;a href=”conceitos_javascript.html”>Javascript&lt;/a&gt;&lt;/li&gt;
+<br>&lt;/ul&gt;
+<br><br>
+&lt;/nav&gt;
+</p>
+</section>
+        <section>
+            <h1>&lt;figure&gt; e &lt;figcaption&gt;</h1>
+            <p>O elemento &lt;figure&gt; é uma marcação de uso específico para a inserção de uma
+            figura. Para incluir a descrição dessa figura, podemos utilizar o elemento
+&lt;figcaption&gt;.</p>
+<p>&lt;figure&gt;<br><br>
+        &lt;img src=”http://meusite.com.br/assets/imagem.jpg” alt=”Imagem”&gt;<br><br>
+        &lt;figcaption&gt;Figura 1. HTML&lt;/figcaption&gt;<br><br>
+&lt;/figure&gt;<br>
+</p>
+</section>
+        <section>
+            <h1>&lt;footer&gt;
+</h1>
+            <p>O elemento &lt;footer&gt; representa um rodapé de um documento, como a área
+            presente no final de uma página web. Normalmente é utilizado para descrever
+            informações de autoria, como nome e contato do autor, e data de criação do
+            conteúdo.</p>
+            <p>&lt;footer&gt;<br><br>
+            &lt;p&gt;Site desenvolvido por Alexandre&lt;/p&gt;<br><br>
+            &lt;p&gt;Publicado em 02/02/2025&lt;/p&gt;<br><br>
+            &lt;/footer&gt;<br><br>
+        </p>
+        </section>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>desenvolvido por Davi Fulber <span id="data"></span></footer>
+    
+    
+</body>
+</html>
