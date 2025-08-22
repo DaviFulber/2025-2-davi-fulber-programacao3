@@ -7,8 +7,8 @@ section{
     border-width: 1px;
     border-style:ridge;
 }
-h1,h2{
-    color: black;
+h1,h2,h3{
+    color: white;
     align-self: center;
     align-items: center;
     justify-content: center;
