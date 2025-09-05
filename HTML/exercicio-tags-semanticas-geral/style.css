@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 1fr 1fr; 
   column-gap: 1rem;             
   list-style-position: inside;  
+  text-align: center;
   
 }
 
@@ -46,4 +47,17 @@ section {
   display: block;
   align-content: start;
   
+}
+footer {
+  display:block;
+  text-align: center;
+}
+body{
+  background-color: rgb(134, 247, 134);
+}
+a:hover {
+  color: black;
+}
+a{
+  cursor:grabbing;
 }
