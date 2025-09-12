@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body style="flex:auto">
     <table border="1" align="center" width="500px">
         <tr>
             <th>Nome</th>
@@ -233,17 +233,115 @@
 
     </table>
 
-<table border="1" align="center" width="500px">
-    <thead>
-        <tr>
-            <th>Mês</th>
-            <th>Receita</th>
-            <th>Despesa</th>
-            <th>Lucro</th>
-        </tr>
-    </thead>
-</table>
+    <table border="1" align="center" width="500px">
+        <colgroup>
+            <col span="2" style="background-color:gray">
+            <col style="background-color:yellow;">
+            <col slot="4" style="background-color: green">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Mês</th>
+                <th>Receita</th>
+                <th>Despesa</th>
+                <th>Lucro</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Jan</th>
+                <td>1000R$</td>
+                <td>4000R$</td>
+                <td>-3000R$</td>
+            </tr>
+            <tr>
+                <th>Fev</th>
+                <td>2000R$</td>
+                <td>9000R$</td>
+                <td>-7000R$</td>
+            </tr>
+            <tr>
+                <th>Fev</th>
+                <td>20000R$</td>
+                <td>9000R$</td>
+                <td>11000R$</td>
+            </tr>
+        </tbody>
+    </table>
 
+
+    <table border="1" align="center" width="500px">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th><abbr title="Quantidade">Qtd.</abbr></th>
+                <th><abbr title="Preço Unidade">PU(R$)</abbr></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Cabo de Rede</th>
+                <td>120</td>
+                <td>8,50</td>
+            </tr>
+            <tr>
+                <th>Roteador</th>
+                <td>35</td>
+                <td>145,00</td>
+            </tr>
+            <tr>
+                <th>Switch 8p</th>
+                <td>20</td>
+                <td>210,00</td>
+            </tr>
+        </tbody>
+    </table>
+    <div style="overflow-x: auto;">
+        <table border="1" align="center" width="500px">
+            <thead>
+                <tr>
+                    <th>
+                        Teste
+                    </th>
+                    <th>v1.0</th>
+                    <th>v1.1</th>
+                    <th>v1.2</th>
+                    <th>v1.3</th>
+                    <th>v1.4</th>
+                    <th>v1.5</th>
+                    <th>v1.6</th>
+                    <th>v1.7</th>
+                    <th>v1.8</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Latencia(ms)</th>
+                    <td>78</td>
+                    <td>57</td>
+                    <td>70</td>
+                    <td>82</td>
+                    <td>87</td>
+                    <td>90</td>
+                    <td>57</td>
+                    <td>60</td>
+                    <td>42</td>
+                </tr>
+                <tr>
+                    <th>Troughtput(req/s)</th>
+                    <td>120</td>
+                    <td>150</td>
+                    <td>132</td>
+                    <td>156</td>
+                    <td>168</td>
+                    <td>170</td>
+                    <td>122</td>
+                    <td>100</td>
+                    <td>171</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>
