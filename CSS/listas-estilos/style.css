@@ -1,0 +1,31 @@
+h1{
+    color: blue;
+}
+h2{
+    color:green;
+}
+.termo{
+    color: red;
+    font-weight: bold;
+}
+#introducao{
+    background-color: grey;
+    font-style: italic;
+}
+section dd{
+    color: rgb(5, 5, 107);
+}
+a[href]{
+    color: orange;
+    text-decoration: none;
+}
+a :hover{
+    color: purple;
+}
+dd::first-letter{
+    size: 5px;
+    color: aqua;
+}
+dt,dd {
+    line-height: 1.6cm;
+}

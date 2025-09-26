@@ -1,0 +1,29 @@
+li{
+    color: blue;
+    font-style: italic;
+}
+.destaque{
+    color: red;
+    font-weight: bold;
+}
+#titulo-principal{
+    color: green;
+    text-align: center;
+    font-size: xx-large;
+}
+section li {
+    background-color: rgb(182, 176, 176);
+    padding: 3px;
+
+}
+body[data-info="info"]{
+    background-color: grey;
+    color: white;
+}
+li:hover{
+    color: orange;
+}
+li::before{
+    content: "🛒";
+    color: grey;
+}
