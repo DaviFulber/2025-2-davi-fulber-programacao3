@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conhecendo o Bootstrap</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+    <style>
+      .custom-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .carousel-img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+      }
+    </style>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="jumbotron text-center">
+      <h1>Conhecendo o Bootstrap CSS</h1>
+      <h2>História, utilização e muito mais!</h2>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <img
+            src="/HTML/imagens/bts-img-2.jfif"
+            alt="Logotipo do Bootstrap"
+            class="rounded img-fluid custom-img mx-auto d-block"
+          />
+        </div>
+        <div class="col-sm-8">
+          <div class="card shadow-sm border-info">
+            <div class="card-header bg-info text-white">
+              <h5 class="mb-0">O que é?</h5>
+            </div>
+            <div class="card-body">
+              <p class="card-text text-justify">
+                O Bootstrap é um framework front-end que fornece estruturas de
+                CSS para criar sites e aplicações responsivas de forma simples,
+                funcionando bem em desktops e dispositivos móveis. Ele foi
+                desenvolvido no Twitter por Mark Otto e Jacob Thornton e
+                inicialmente se chamava Twitter Blueprint. Durante uma Hack
+                Week, ganhou popularidade entre desenvolvedores e, após isso,
+                tornou-se o guia de estilo interno da empresa por mais de um
+                ano, até ser lançado como código aberto, tornando-se uma das
+                ferramentas mais usadas no mundo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="card shadow-sm border-info">
+            <div class="card-header bg-info text-white">
+              <h5 class="mb-0">História</h5>
+            </div>
+            <div class="card-body">
+              <p class="card-text text-justify">
+                Desenvolvido em 2010 por Mark Otto e Jacob Thornton no Twitter,
+                o Bootstrap começou como um projeto interno chamado Twitter
+                Blueprint. Durante uma Hack Week, a ferramenta ganhou
+                popularidade entre os desenvolvedores da empresa por sua
+                capacidade de padronizar interfaces. Em 2011, o Bootstrap foi
+                lançado como um projeto de código aberto, permitindo que
+                desenvolvedores do mundo todo o utilizassem e contribuíssem.
+                Hoje, ele é mantido por uma comunidade global e está na versão
+                5, com melhorias constantes em desempenho e acessibilidade.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <img
+            src="/HTML/imagens/coding-all-in-one-mark-otto-jacob-thornton1.jpg"
+            alt="Mark Otto e Jacob Thornton, criadores do Bootstrap"
+            class="rounded img-fluid custom-img mx-auto d-block"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="card shadow-sm border-info">
+            <div class="card-header bg-info text-white">
+              <h5 class="mb-0">Vantagens do Bootstrap</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center list-group-item-action"
+              >
+                <span
+                  ><em>Responsividade</em>: Sistema de grid que se ajusta a
+                  diferentes tamanhos de tela.</span
+                >
+                <span class="badge badge-primary badge-pill">12 Colunas</span>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center list-group-item-action"
+              >
+                <span
+                  ><em>Componentes Prontos</em>: Botões, modais, formulários e
+                  mais.</span
+                >
+                <span class="badge badge-primary badge-pill"
+                  >50+ Componentes</span
+                >
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center list-group-item-action"
+              >
+                <span
+                  ><em>Personalização</em>: Customização via Sass ou CSS.</span
+                >
+                <span class="badge badge-primary badge-pill">Flexível</span>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center list-group-item-action"
+              >
+                <span
+                  ><em>Compatibilidade</em>: Suporte a navegadores
+                  modernos.</span
+                >
+                <span class="badge badge-primary badge-pill"
+                  >Cross-Browser</span
+                >
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center list-group-item-action"
+              >
+                <span
+                  ><em>Comunidade Ativa</em>: Documentação e suporte
+                  comunitário.</span
+                >
+                <span class="badge badge-primary badge-pill">Global</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="card shadow-sm border-info">
+            <div class="card-header bg-info text-white">
+              <h5 class="mb-0">Exemplo de Formulário Bootstrap</h5>
+            </div>
+            <div class="card-body">
+              <form class="form-inline justify-content-center" method="post" action="/PHP (pouco utilizado)/processa-form.php">
+                <div class="form-group mb-2 mr-2">
+                  <label for="email" class="sr-only">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Digite seu email"
+                  />
+                </div>
+                <div class="form-group mb-2 mr-2">
+                  <label for="pwd" class="sr-only">Senha</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="pwd"
+                    placeholder="Digite sua senha"
+                  />
+                </div>
+                <div class="form-group mb-2 mr-2">
+                  <div class="form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="remember"
+                    />
+                    <label class="form-check-label" for="remember"
+                      >Lembrar-me</label
+                    >
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">
+                  Enviar
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="card shadow-sm border-info">
+            <div class="card-header bg-info text-white">
+              <h5 class="mb-0">Exemplo de Carrossel Bootstrap</h5>
+            </div>
+            <div class="card-body p-0">
+              <div
+                id="bootstrapCarousel"
+                class="carousel slide"
+                data-ride="carousel"
+              >
+                <ol class="carousel-indicators">
+                  <li
+                    data-target="#bootstrapCarousel"
+                    data-slide-to="0"
+                    class="active"
+                  ></li>
+                  <li data-target="#bootstrapCarousel" data-slide-to="1"></li>
+                  <li data-target="#bootstrapCarousel" data-slide-to="2"></li>
+                  <li data-target="#bootstrapCarousel" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="/HTML/imagens/ALINE VASS.jpg"
+                      alt="Exemplo de grid responsivo do Bootstrap"
+                      class="d-block w-100 carousel-img"
+                    />
+                    <div class="carousel-caption d-none d-md-block bg-info text-white p-2 rounded">
+                      <h5>Sistema de Grid Responsivo</h5>
+                      <p>
+                        Crie layouts que se adaptam a qualquer tamanho de tela com
+                        o grid de 12 colunas.
+                      </p>
+                      <a
+                        href="https://getbootstrap.com/docs/4.6/layout/grid/"
+                        class="btn btn-primary btn-sm"
+                        >Saiba Mais</a
+                      >
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="/HTML/imagens/HUGO CESAR.jpg"
+                      alt="Componentes prontos do Bootstrap"
+                      class="d-block w-100 carousel-img"
+                    />
+                    <div class="carousel-caption d-none d-md-block bg-info text-white p-2 rounded">
+                      <h5>Componentes Prontos</h5>
+                      <p>
+                        Botões, modais, formulários e mais, prontos para uso.
+                      </p>
+                      <a
+                        href="https://getbootstrap.com/docs/4.6/components/"
+                        class="btn btn-primary btn-sm"
+                        >Saiba Mais</a
+                      >
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="/HTML/imagens/JOAO GABRIEL FELD.jpg"
+                      alt="Comunidade ativa do Bootstrap"
+                      class="d-block w-100 carousel-img"
+                    />
+                    <div class="carousel-caption d-none d-md-block bg-info text-white p-2 rounded">
+                      <h5>Comunidade Ativa</h5>
+                      <p>
+                        Suporte global com documentação completa e contribuições.
+                      </p>
+                      <a
+                        href="https://getbootstrap.com/docs/4.6/about/overview/"
+                        class="btn btn-primary btn-sm"
+                        >Saiba Mais</a
+                      >
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="/HTML/imagens/FotoLattes3 (1).jpg"
+                      alt="Homenagem a professor do IFSC"
+                      class="d-block w-100 carousel-img"
+                    />
+                    <div class="carousel-caption d-none d-md-block bg-info text-white p-2 rounded">
+                      <h5>Homenagem Especial</h5>
+                      <p>Reconhecimento ao melhor professor do IFSC.</p>
+                    </div>
+                  </div>
+                </div>
+                <a
+                  class="carousel-control-prev"
+                  href="#bootstrapCarousel"
+                  role="button"
+                  data-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">Anterior</span>
+                </a>
+                <a
+                  class="carousel-control-next"
+                  href="#bootstrapCarousel"
+                  role="button"
+                  data-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">Próximo</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="card shadow-sm border-info">
+            <div class="card-header bg-info text-white">
+              <h5 class="mb-0">Casos de Uso do Bootstrap</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center list-group-item-action"
+              >
+                <span
+                  ><em>Sites Institucionais</em>: Crie páginas profissionais para
+                  empresas.</span
+                >
+                <span class="badge badge-primary badge-pill">Rápido</span>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center list-group-item-action"
+              >
+                <span
+                  ><em>Aplicações Web</em>: Desenvolva interfaces consistentes
+                  para dashboards.</span
+                >
+                <span class="badge badge-primary badge-pill">Escalável</span>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center list-group-item-action"
+              >
+                <span
+                  ><em>Prototipagem</em>: Crie mockups funcionais rapidamente.</span
+                >
+                <span class="badge badge-primary badge-pill">Eficiente</span>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center list-group-item-action"
+              >
+                <span
+                  ><em>Educação</em>: Ideal para ensinar design responsivo.</span
+                >
+                <span class="badge badge-primary badge-pill">Didático</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    div class="container mt-5">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="text-center mb-4">Principais Referências que Utilizam Bootstrap</h2>
+          <p class="text-center text-muted mb-4">Sites famosos que adotam o framework para layouts responsivos e componentes modernos. Clique nos links para visitar.</p>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Card 1: Spotify -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card reference-card shadow-sm border-info h-100">
+            <div class="card-body">
+              <h5 class="card-title">Spotify</h5>
+              <p class="card-text">Plataforma de streaming que usa Bootstrap para interfaces responsivas em web e mobile.</p>
+              <a href="https://www.spotify.com" target="_blank" class="btn btn-primary">Visitar Site</a>
+            </div>
+            <!-- Iframe para preview (Spotify pode bloquear, mas link funciona) -->
+            <iframe src="https://www.spotify.com" class="reference-iframe" title="Preview Spotify"></iframe>
+          </div>
+        </div>
+        <!-- Card 2: Twitter (X) -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card reference-card shadow-sm border-info h-100">
+            <div class="card-body">
+              <h5 class="card-title">Twitter (X)</h5>
+              <p class="card-text">Rede social pioneira no uso do Bootstrap (originalmente desenvolvido lá).</p>
+              <a href="https://twitter.com" target="_blank" class="btn btn-primary">Visitar Site</a>
+            </div>
+            <!-- Iframe para preview (Twitter bloqueia iframes, use link) -->
+            <iframe src="https://twitter.com" class="reference-iframe" title="Preview Twitter"></iframe>
+          </div>
+        </div>
+        <!-- Card 3: Etsy -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card reference-card shadow-sm border-info h-100">
+            <div class="card-body">
+              <h5 class="card-title">Etsy</h5>
+              <p class="card-text">Marketplace de artesanato com grids e componentes responsivos via Bootstrap.</p>
+              <a href="https://www.etsy.com" target="_blank" class="btn btn-primary">Visitar Site</a>
+            </div>
+            <!-- Iframe para preview -->
+            <iframe src="https://www.etsy.com" class="reference-iframe" title="Preview Etsy"></iframe>
+          </div>
+        </div>
+        <!-- Card 4: LinkedIn -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card reference-card shadow-sm border-info h-100">
+            <div class="card-body">
+              <h5 class="card-title">LinkedIn</h5>
+              <p class="card-text">Rede profissional que integra Bootstrap para dashboards e perfis.</p>
+              <a href="https://www.linkedin.com" target="_blank" class="btn btn-primary">Visitar Site</a>
+            </div>
+            <!-- Iframe para preview (LinkedIn pode bloquear) -->
+            <iframe src="https://www.linkedin.com" class="reference-iframe" title="Preview LinkedIn"></iframe>
+          </div>
+        </div>
+        <!-- Card 5: Udemy -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card reference-card shadow-sm border-info h-100">
+            <div class="card-body">
+              <h5 class="card-title">Udemy</h5>
+              <p class="card-text">Plataforma de cursos online com formulários e carrosséis baseados em Bootstrap.</p>
+              <a href="https://www.udemy.com" target="_blank" class="btn btn-primary">Visitar Site</a>
+            </div>
+            <!-- Iframe para preview -->
+            <iframe src="https://www.udemy.com" class="reference-iframe" title="Preview Udemy"></iframe>
+          </div>
+        </div>
+        <!-- Card 6: Lyft -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card reference-card shadow-sm border-info h-100">
+            <div class="card-body">
+              <h5 class="card-title">Lyft</h5>
+              <p class="card-text">App de mobilidade urbana que usa Bootstrap para seu site web responsivo.</p>
+              <a href="https://www.lyft.com" target="_blank" class="btn btn-primary">Visitar Site</a>
+            </div>
+            <!-- Iframe para preview -->
+            <iframe src="https://www.lyft.com" class="reference-iframe" title="Preview Lyft"></iframe>
+          </div>
+        </div>
+      </div>
+      <!-- Lista Complementar de Mais Exemplos -->
+      <div class="row">
+        <div class="col-12">
+          <div class="card shadow-sm border-info">
+            <div class="card-header bg-info text-white">
+              <h5 class="mb-0">Mais Exemplos Rápidos</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><a href="https://www.minecraft.net" target="_blank">Minecraft.net</a> - Site oficial com layouts responsivos.</li>
+              <li class="list-group-item"><a href="https://colorlib.com" target="_blank">Colorlib</a> - Templates e demos de Bootstrap.</li>
+              <li class="list-group-item"><a href="https://www.anydesk.com" target="_blank">AnyDesk</a> - Ferramenta remota com UI moderna.</li>
+              <li class="list-group-item"><a href="https://getbootstrap.com/docs/4.6/examples/" target="_blank">Exemplos Oficiais do Bootstrap</a> - Demos prontas para copiar.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Iframe para Exemplos Oficiais do Bootstrap (funciona bem) -->
+      <div class="row mt-4">
+        <div class="col-12">
+          <h5 class="text-center">Exemplo Embedado: Templates Oficiais do Bootstrap</h5>
+          <iframe src="https://getbootstrap.com/docs/4.6/examples/" class="reference-iframe" title="Exemplos Bootstrap"></iframe>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
