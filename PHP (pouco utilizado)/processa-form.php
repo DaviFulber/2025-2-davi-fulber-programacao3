@@ -8,29 +8,135 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validação básica
     $erros = [];
-    if (empty($email)) {
-        $erros[] = "O campo email é obrigatório.";
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $erros[] = "O email informado não é válido.";
+    if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $erros[] = "E-mail inválido ou não fornecido.";
     }
-    if (empty($senha)) {
-        $erros[] = "O campo senha é obrigatório.";
+    if (empty($senha) || strlen($senha) < 6) {
+        $erros[] = "A senha deve ter pelo menos 6 caracteres.";
     }
-
-    // Exibe os resultados ou erros
-    if (empty($erros)) {
-        echo "<h2>Dados Recebidos:</h2>";
-        echo "<p><strong>Email:</strong> " . htmlspecialchars($email) . "</p>";
-        echo "<p><strong>Senha:</strong> " . htmlspecialchars($senha) . "</p>";
-        echo "<p><strong>Lembrar-me:</strong> " . htmlspecialchars($remember) . "</p>";
-        echo '<a href="index.html" class="btn btn-primary">Voltar</a>';
-    } else {
-        echo "<h2>Erros no Formulário:</h2>";
-        foreach ($erros as $erro) {
-            echo "<p style='color: red;'>$erro</p>";
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resposta do Formulário</title>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        crossorigin="anonymous"
+    />
+    <style>
+        body {
+            background-color: #f8f9fa;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
         }
-        echo '<a href="index.html" class="btn btn-primary">Voltar</a>';
-    }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 15px;
+        }
+        .response-card {
+            max-width: 500px;
+            width: 100%;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .card-header {
+            padding: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        .card-body {
+            padding: 2rem;
+        }
+        .data-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .data-item strong {
+            color: #495057;
+        }
+        .btn-back {
+            width: 100%;
+            padding: 0.75rem;
+            font-size: 1.1rem;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        .btn-back:hover {
+            background-color: #0056b3;
+        }
+        .alert {
+            border-radius: 10px;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+    <div class="container">
+        <div class="response-card">
+            <?php if (empty($erros)): ?>
+                <div class="card-header bg-info text-white">
+                    Dados Recebidos com Sucesso
+                </div>
+                <div class="card-body">
+                    <div class="data-item">
+                        <strong>Email:</strong>
+                        <span><?php echo htmlspecialchars($email); ?></span>
+                    </div>
+                    <div class="data-item">
+                        <strong>Senha:</strong>
+                        <span>[Ocultada por segurança]</span>
+                    </div>
+                    <div class="data-item">
+                        <strong>Lembrar-me:</strong>
+                        <span><?php echo htmlspecialchars($remember); ?></span>
+                    </div>
+                    <a href="bootstrap.html" class="btn btn-primary btn-back">Voltar ao Formulário</a>
+                </div>
+            <?php else: ?>
+                <div class="card-header bg-danger text-white">
+                    Erros no Formulário
+                </div>
+                <div class="card-body">
+                    <?php foreach ($erros as $erro): ?>
+                        <div class="alert alert-danger" role="alert">
+                            <?php echo htmlspecialchars($erro); ?>
+                        </div>
+                    <?php endforeach; ?>
+                    <a href="index.html" class="btn btn-primary btn-back">Voltar ao Formulário</a>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+</body>
+</html>
+<?php
 } else {
     // Se não for POST, redireciona para o formulário
     header("Location: index.html");
