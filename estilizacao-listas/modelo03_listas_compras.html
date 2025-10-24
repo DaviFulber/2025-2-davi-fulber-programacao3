@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Lista de compras — Estilo Acessível/Print</title>
+
+        <link rel="stylesheet" href="modelo03.css">
+    </head>
+
+    <body>
+        <header>Lista de compras do supermercado IFSC</header>
+        <main>
+            <h1>Lista com os 5 itens do supermercado IFSC:</h1>
+
+            <!-- mantenha o marcador padrão para impressão e leitores -->
+            <ul class="access-list" role="list" aria-label="Lista de compras">
+            <li tabindex="0"><span>Café</span><span class="quantity">1 pacote</span></li>
+            <li tabindex="0"><span>Refrigerante</span><span class="quantity">2 latas</span></li>
+            <li tabindex="0"><span>Energético</span><span class="quantity">1 lata</span></li>
+            <li tabindex="0"><span>Carne</span><span class="quantity">1 kg</span></li>
+            <li tabindex="0"><span>Massa</span><span class="quantity">500 g</span></li>
+            </ul>
+
+            <p class="no-print" style="margin-top:16px;font-size:0.9rem;color:#374151">
+            Dica: pressione TAB para navegar entre os itens (modo teclado).
+            </p>
+        </main>
+    </body>
+
+</html>

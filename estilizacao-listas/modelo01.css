@@ -1,0 +1,136 @@
+:root{
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #6f7cff;
+  --shadow: 0 8px 24px rgba(34,40,60,0.08);
+  --radius: 12px;
+  --max-width: 720px;
+  --gap: 18px;
+}
+
+/* Tipografia básica e centralização para o body - todo o conteúdo do body é centralizado*/
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--bg), #ffffff);
+  color:#111827;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px 16px;
+}
+
+/* Container/card principal - a div é o container que armazena todo o conteúdo da div,
+arredonda as bordas*/
+.container{
+  width:100%;
+  max-width:var(--max-width);
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:28px;
+  border: 1px solid rgba(15,23,42,0.03);
+}
+
+/* Cabeçalho - estilizao cabeçalho Lista de compras...*/
+header{
+  font-weight:700;
+  font-size:1.05rem;
+  color:var(--accent);
+  letter-spacing:0.2px;
+  margin-bottom:6px;
+}
+
+/* Título da seção */
+h1{
+  margin:0 0 var(--gap) 0;
+  font-size:1.35rem;
+  color:#0f172a;
+  font-weight:600;
+}
+
+/* Lista — estética limpa */
+ul.shopping-list{
+  list-style:none; /*remove os marcadores padrão de lista */
+  padding:0;
+  margin:0;
+  display:flex; /*permite que seus itens (<li>) se organizem de maneira flexível,*/
+  flex-direction:column; /*organiza os itens verticalmente, um abaixo do outro, de cima 
+  para baixo, alterando o eixo principal de horizontal para vertical.*/
+  gap:12px;/*quando usada com os layouts flexbox ou grid, cria um espaçamento de 12 pixels
+  entre os itens da lista (tanto horizontalmente quanto verticalmente).
+  */
+}
+
+/* Define o estilo dos itens da lista */
+ul.shopping-list li{
+    /* Cria uma linha azul com gradiente p/ cada item da lista */
+    background: linear-gradient(90deg, rgba(111,124,255,0.06)
+    , rgba(111,124,255,0.02));
+
+    /* define o espaçamento interno de um item da lista, definindo 12 pixels
+     de preenchimento superior e inferior e 14 pixels de preenchimento direito e esquerdo. 
+    */
+    padding:12px 14px;
+
+    border-radius:10px; /*arredonda as bordas do gradiente*/
+
+    display:flex; /*define um layout flexível p/ os itens da lista*/
+
+    /*centraliza os itens de uma lista verticalmente desde que o layout da lista flex ou grid.*/
+    align-items:center;
+
+    /*distribui os itens de uma lista flexível em uma única linha, colocando o primeiro item no 
+    início do contêiner e o último no final, enquanto distribui o espaço restante igualmente 
+    entre todos os outros itens. Para que funcione corretamente, o contêiner pai precisa ter um 
+    display: flex*/
+    justify-content:space-between;
+
+    /*Coloca os itens da lista em negrito - define a espessura da fonte como "Média" (Medium)
+    O valor numérico 500 é mais granular do que as palavras-chave como bold*/
+    font-weight:500;
+
+    /*Coloca uma borda no gradiente*/
+    border: 1px solid rgba(15,23,42,0.03);
+
+    /*Define uma animação, para os itens da lista, quando a pseudo-classe:hover
+    estiver definida para a lista*/
+    transition:transform .18s ease, box-shadow .18s ease;
+}
+
+/* marcador visual à esquerda (usando pseudo-elemento) */
+ul.shopping-list li::before{
+  content:""; /* pode substituir por emoji se quiser: "☕" */   
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:var(--accent);
+  margin-right:12px;
+  display:inline-block;
+  flex:0 0 auto;
+  box-shadow:0 2px 6px rgba(111,124,255,0.18);
+}
+
+/* hover leve */
+ul.shopping-list li:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 30px rgba(16,24,40,0.06);
+}
+
+/* pequena descrição à direita (ex: quantidade / categoria) — opcional */
+ul.shopping-list li .meta{
+  font-size:0.9rem;
+  color:var(--muted);
+  margin-left:12px;
+  white-space:nowrap;
+}
+
+/* Responsividade
+@media (max-width:420px){
+  .container{padding:18px}
+  h1{font-size:1.15rem}
+  ul.shopping-list li{padding:10px}
+}*/

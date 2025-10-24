@@ -1,0 +1,67 @@
+/* ------------------------
+   Estilo focado em contraste e impressão
+   ------------------------ */
+:root{
+  --bg: #ffffff;
+  --text: #0b1220;
+  --accent: #0b4f6c;
+  --muted: #334155;
+  --radius:8px;
+  --gap:12px;
+}
+
+/* Reset mínimo */
+*{box-sizing:border-box}
+body{
+  margin:20px;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.45;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Estrutura simples, foco no conteúdo */
+header{
+  font-size:1.15rem;
+  font-weight:700;
+  color:var(--accent);
+  margin-bottom:10px;
+}
+h1{font-size:1.05rem;margin:0 0 10px 0}
+
+/* Lista tradicional, marcadores visíveis e grandes */
+ul.access-list{
+  padding-left:26px; /* deixa marcador padrão visível para leitores */
+  margin:0;
+}
+ul.access-list li{
+  font-size:1.05rem;
+  padding:8px 6px;
+  border-bottom:1px dashed rgba(0,0,0,0.06);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* Facilitar leitura por leitores de tela e navegação por teclado */
+ul.access-list li:focus{
+  outline:3px solid rgba(11,79,108,0.18);
+  outline-offset:2px;
+  background:rgba(11,79,108,0.02);
+}
+li .quantity{color:var(--muted);font-size:0.95rem}
+
+/* Altas-contraste (para usuários com visão reduzida) */
+@media (prefers-contrast: more){
+  body{background:#fff}
+  header{color:#04293a}
+  ul.access-list li{border-bottom:2px solid rgba(0,0,0,0.12)}
+}
+
+/* Estilo de impressão: limpa e sem cores de fundo */
+@media print{
+  body{margin:8mm;color:#000;background:#fff}
+  .no-print{display:none !important}
+  ul.access-list li{page-break-inside:avoid;border-bottom:1px solid #ddd}
+}

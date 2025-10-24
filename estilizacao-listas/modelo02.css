@@ -1,0 +1,111 @@
+/* -------------------------
+   Variáveis e reset
+   ------------------------- */
+:root{
+  --bg: linear-gradient(180deg,#0f172a 0%, #0b1220 100%);
+  --panel: #0b1220;
+  --card-grad: linear-gradient(135deg,#0ea5a4 0%, #7c3aed 100%);
+  --glass: rgba(255,255,255,0.04);
+  --white-trans: rgba(255,255,255,0.92);
+  --accent: #7c3aed;
+  --radius: 14px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100vh;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background:var(--bg);
+  color:var(--white-trans);
+  padding:32px;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+}
+
+/* Painel principal com efeito 'glass' */
+.panel{
+  width:100%;
+  max-width:880px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  border-radius:var(--radius);
+  padding:22px;
+  border:1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 12px 40px rgba(2,6,23,0.6);
+}
+
+/* Header com destaque */
+.header-hero{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:18px;
+}
+.logo-badge{
+  width:56px;height:56px;border-radius:12px;
+  background:var(--card-grad);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:1.05rem;
+  box-shadow:0 8px 30px rgba(124,58,237,0.18);
+}
+.header-hero h1{
+  margin:0;font-size:1.25rem;letter-spacing:0.2px;
+}
+
+/* Lista em grid (cards pequenos) */
+ul.card-list{
+  list-style:none;margin:0;padding:0;
+  display:grid;
+  grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+  gap:14px;
+}
+
+/* Cada item é um card */
+ul.card-list li{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:12px;
+  padding:12px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  border:1px solid rgba(255,255,255,0.03);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+
+/* Ícone à esquerda (pode ser emoji ou SVG) */
+li .icon{
+  flex:0 0 44px;
+  height:44px;
+  border-radius:10px;
+  background:linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  display:flex;align-items:center;justify-content:center;font-size:1.2rem;
+}
+
+/* Conteúdo textual */
+li .content{
+  flex:1;
+}
+li .content .title{font-weight:600}
+li .content .desc{font-size:0.88rem;color:rgba(255,255,255,0.72);margin-top:6px}
+
+/* Badge de categoria */
+.badge{
+  padding:6px 8px;border-radius:999px;font-size:0.78rem;
+  background: rgba(255,255,255,0.06);
+  color:var(--white-trans);
+  white-space:nowrap;
+}
+
+/* Hover dá pop e eleva o card */
+ul.card-list li:hover{
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 20px 50px rgba(2,6,23,0.65);
+}
+
+/* Pequena adaptação mobile 
+@media (max-width:480px){
+  .header-hero{gap:10px}
+  .logo-badge{width:48px;height:48px}
+  ul.card-list{grid-template-columns:repeat(1,1fr)}
+}*/
