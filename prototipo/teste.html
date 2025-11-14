@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <table border="1" id="tabela" style="margin-top: 20px; width: 400px;">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Título</th>
+                <th>Descrição</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody id="corpoTabela">
+        </tbody>
+    </table>
+    
+    <script>
+    function alerta() {
+        Swal.fire({
+            title: "Informe os dados sobre o evento",
+            html: `
+                <input id="date" type="date" class="swal2-input" placeholder="Digite a data">
+                <input id="nome" type="text" class="swal2-input" placeholder="Título">
+                <textarea id="descricao" class="swal2-textarea" placeholder="Descreva a atividade"></textarea>
+            `,
+            focusConfirm: false,
+            preConfirm: () => {
+                const data = document.getElementById('date').value;
+                const titulo = document.getElementById('nome').value;
+                const descricao = document.getElementById('descricao').value;
+
+                if (!data || !titulo || !descricao) {
+                    Swal.showValidationMessage("Preencha os campos!");
+                }
+
+                return { data, titulo, descricao };
+            }
+        }).then((result) => {
+            if (result.value) {
+                const corpo = document.getElementById("corpoTabela");
+
+                // Cria uma nova linha
+                const linha = document.createElement("tr");
+
+                // Cria as células
+                const tdData = document.createElement("td");
+                const tdTitulo = document.createElement("td");
+                const tdDescricao = document.createElement("td");
+                const tdAcao = document.createElement("td");
+
+
+
+
+                const Exclui = document.createElement("button");
+                Exclui.textContent = "Excluir";
+                Exclui.style.cursor = "pointer";
+                Exclui.style.background = "red";
+                Exclui.style.color = "white";
+
+                Exclui.onclick = function (){
+                    linha.remove();
+                }
+
+
+                tdAcao.appendChild(Exclui);
+                // Adiciona conteúdo
+                tdData.textContent = result.value.data;
+                tdTitulo.textContent = result.value.titulo;
+                tdDescricao.textContent = result.value.descricao;
+                
+
+                // Adiciona à linha (um por vez!)
+                linha.appendChild(tdData);
+                linha.appendChild(tdTitulo);
+                linha.appendChild(tdDescricao);
+                linha.appendChild(tdAcao);
+
+                // Adiciona à tabela
+                corpo.appendChild(linha);
+            }
+        });
+    }
+    </script>
+
+    <button onclick="alerta()">Adicionar tarefa</button>
+</body>
+</html>
